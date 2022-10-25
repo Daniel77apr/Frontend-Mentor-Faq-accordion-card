@@ -1,0 +1,167 @@
+:root {
+    /* Text */
+    --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --soft-red: hsl(14, 88%, 65%);
+    /* Background gradient */
+    --soft-violet: hsl(273, 75%, 66%);
+    --soft-blue: hsl(240, 73%, 65%);
+
+    /* Neutral */
+    /* Text */
+    --very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --dark-grayish-blue: hsl(240, 6%, 50%);
+    /* Dividers */ 
+    --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(var(--soft-violet), var(--soft-blue));
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 20px);
+    padding: 20px;
+}
+
+#card {
+    background-color: white;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 1000px;
+    max-width: 95%;
+}
+
+#text-container {
+    margin: 15% 15% 15% 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+h1 {
+    color: var(--very-dark-desaturated-blue);
+    margin-bottom: 1rem;
+}
+
+.question-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--very-dark-grayish-blue);
+}
+
+.question-container:hover {
+    cursor: pointer;
+    color: var(--soft-red);
+}
+
+.arrow {
+    transition: transform 0.4s;
+}
+
+.question {
+    margin: 1rem 0;
+}
+
+.answer {
+    display: none;
+    color: var(--dark-grayish-blue);
+    margin-bottom: 1rem;
+}
+
+hr {
+    border: 1px solid var(--light-grayish-blue);
+}
+
+#image-container {
+    position: relative;
+}
+
+#box-image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-20%);
+    left: -17%;
+    z-index: 1;
+    width: 35%;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+
+.woman-online-image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    left: -17%;
+}
+
+.shadow-image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200%;
+    left: -115%;
+}
+
+@media (max-width: 450px) {
+    body {
+        font-size: 12px;
+    }
+    
+    #card {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+    }
+
+    #box-image {
+        display: none;
+    }
+
+    #text-container {
+        margin: 0 0 2.5rem 0;
+        padding: 0 1.5rem 0 1.5rem;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    #image-container {
+        height: 130px;
+    }
+
+    .overflow-hidden {
+        overflow: visible;
+    }
+
+    .woman-online-image {
+        top: 0;
+        width: 80%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+    }
+
+    .shadow-image {
+        position: absolute;
+        top: 0;
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+}
+
