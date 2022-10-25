@@ -101,7 +101,7 @@ hr {
     height: 100%;
 }
 
-.woman-online-image {
+#woman-online-image {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -109,7 +109,7 @@ hr {
     left: -17%;
 }
 
-.shadow-image {
+#shadow-image {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
