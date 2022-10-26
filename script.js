@@ -2,9 +2,8 @@ const questionEls = document.getElementsByClassName("question-container");
 const answerEls = document.getElementsByClassName("answer");
 const arrowEls = document.getElementsByClassName("arrow");
 
-
 function revealAndHide(active, ...unactive) {
-answerEls[active].style.display = "block";
+    answerEls[active].style.display = "block";
     questionEls[active].style.fontWeight = "700";
     arrowEls[active].style.transform = "rotate(180deg)";
     for (let i = 0; i < unactive.length ; i++) {
@@ -16,7 +15,6 @@ answerEls[active].style.display = "block";
 }
 
 function hide(unactive) {
-
     answerEls[unactive].style.display = "none";
     questionEls[unactive].style.fontWeight = "400";
     arrowEls[unactive].style.transform = "rotate(0)";  
