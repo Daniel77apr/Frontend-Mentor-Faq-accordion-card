@@ -141,6 +141,10 @@ hr {
         text-align: center;
     }
 
+    .question-container:hover {
+        color: var(--very-dark-grayish-blue);
+    }
+
     #image-container {
         height: 130px;
     }
